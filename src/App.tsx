@@ -13,14 +13,7 @@ function App() {
   return (
     <main>
       <TitleCard
-        tagline="Full Stack Web Developer"
-        showAvailability={false}
-        preferredWork={[
-          'Full Stack Web Developer Roles',
-          'Front End Web Developer Roles',
-          'Part Time Contracts',
-          'Full Time Contracts',
-        ]}
+        tagline="Senior Engineer"
       />
       <SkillsCheck codeWarsBadgeSize="large" />
       <Projects />
