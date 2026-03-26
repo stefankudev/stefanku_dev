@@ -11,7 +11,7 @@ interface TitleCardProps {
 export default function TitleCard({
   showAvailability = false,
   availability = true,
-  preferredWork = ['Full Time Roles', 'Part Time Roles', 'Freelance Work'],
+  preferredWork = ['Full Time Roles', 'Contract Roles'],
   tagline = "It's in the name",
 }: TitleCardProps) {
   return (
