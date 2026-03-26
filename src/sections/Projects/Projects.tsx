@@ -1,10 +1,10 @@
 import Card from '../../components/Card/Card'
-import ProjectCard from '../../components/ProjectCard/ProjectCard'
 
 export default function Projects() {
   return (
-    <Card title="Projects" titleSeperator>
-      <ProjectCard
+    <Card title="Featured Projects" titleSeperator>
+      <p>TBC...</p>
+      {/* <ProjectCard
         thumbnail="/projectImages/powagile/powagile.jpg"
         video="/projectImages/powagile/powagile.webm"
         title="Pow!Agile — Better remote agile ceremonies"
@@ -22,7 +22,7 @@ export default function Projects() {
         description="Iternal is a platform dedicated to preserving your legacy, helping you upload your most cherished memories and share them with friends and family."
         techStack={['react', 'nodejs', 'mongoDB', 'heroku', 'git', 'github', 'figma', 'adobephotoshop', 'adobeillustrator', 'trello']}
         links={[{ url: 'https://iternal.app/sign-up', linkTitle: 'Sign up' }]}
-      />
+      /> */}
     </Card>
   )
 }
