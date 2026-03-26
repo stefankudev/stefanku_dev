@@ -9,7 +9,7 @@ interface TitleCardProps {
 }
 
 export default function TitleCard({
-  showAvailability = false,
+  showAvailability = true,
   availability = true,
   preferredWork = ['Full Time Roles', 'Contract Roles'],
   tagline = "It's in the name",
