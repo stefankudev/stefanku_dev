@@ -6,23 +6,16 @@ import CommunityWork from './sections/Talks/CommunityWork'
 import Hobbies from './sections/Hobbies/Hobbies'
 import ContactDetails from './sections/ContactDetails/ContactDetails'
 
-import css from './App.module.css'
-import cn from 'classnames'
-
 function App() {
   return (
     <main>
-      <TitleCard
-        tagline="Senior Engineer"
-      />
-      <SkillsCheck codeWarsBadgeSize="large" />
+      <TitleCard />
+      <SkillsCheck />
       <Projects />
       <CommunityWork />
       <Testimonials />
       <Hobbies />
-      <footer className={cn(css.footer)}>
-        <ContactDetails />
-      </footer>
+      <ContactDetails />
     </main>
   )
 }
