@@ -4,111 +4,81 @@
 }
 
 .contactText {
-    text-align: center;
-    line-height: 1.75rem;
-    color: rgba(255, 255, 255, 0.75);
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 50px auto 0;
+  text-align: center;
+  line-height: 1.75rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 50px auto 0;
 }
 
 .contactButtonContainer {
-    display: block;
-    text-align: center;
-    padding: 35px;
-    margin-bottom: 10rem;
-    color: white;
-    border-radius: 0.5rem;
-    z-index: 999;
-    opacity: 1;
-    line-height: 4rem;
-}
-
-.contactButtonContainer a {
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    color: rgba(40, 49, 53, 1);
-    background: white !important;
-    font-size: 1.1em;
-    margin: 0 0.5em;
-    text-decoration-color: rgba(255, 255, 255, 0);
-    padding: 0.85rem 1.25rem;
-    border-radius: 0.5rem;
-    border: 1px solid white;
-}
-
-.contactButtonContainer a:hover {
-    transition: 0.2s all ease;
-    background: rgba(255, 255, 255, 0.1);
-    text-decoration: none !important;
-    z-index: 10;
-}
-
-.contactButtonLogo {
-    width: 1.2em;
-    height: 1.2em;
-    aspect-ratio: 1/1;
-    display: inline-block;
-    padding: 0 0.2em;
-    margin: -0.175em auto;
-    fill: #ffffff;
+  display: block;
+  text-align: center;
+  padding: 35px;
+  margin-bottom: 10rem;
+  color: white;
+  border-radius: 0.5rem;
+  z-index: 999;
+  opacity: 1;
+  line-height: 4rem;
 }
 
 .hide {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fancyHr {
-    border: none;
-    height: 2px;
-    border-radius: 99em;
-    background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0.2),
-            rgba(255, 255, 255, 0.05)
-    );
+  border: none;
+  height: 2px;
+  border-radius: 99em;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
 }
 
 .rainbowBackground {
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    bottom: -35%;
-    left: calc(50% - 7rem);
-    color: black;
-    margin-top: -12.5%; /* Negative half of height. */
-    margin-left: -12.5%; /* Negative half of width. */
-    border-radius: 999rem;
-    background: red;
-    z-index: -1;
-    background: linear-gradient(
-            45deg,
-            #eb5f1b,
-            #c940c5,
-            #2180e3,
-            #25c7d0,
-            #29cbaa,
-            #57c643,
-            #efc022,
-            #ff9227,
-            #eb5f1b
-    );
-    filter: blur(80px);
-    opacity: 0.3;
-    animation: shiftRainbow 10s linear infinite;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  bottom: -35%;
+  left: calc(50% - 7rem);
+  color: black;
+  margin-top: -12.5%; /* Negative half of height. */
+  margin-left: -12.5%; /* Negative half of width. */
+  border-radius: 999rem;
+  background: red;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #eb5f1b,
+    #c940c5,
+    #2180e3,
+    #25c7d0,
+    #29cbaa,
+    #57c643,
+    #efc022,
+    #ff9227,
+    #eb5f1b
+  );
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: shiftRainbow 10s linear infinite;
 }
 
 @keyframes shiftRainbow {
-    0% {
-        transform: rotate(360deg);
-    }
-    50% {
-        transform: rotate(180deg) scale(1, 0.75);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(180deg) scale(1, 0.75);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

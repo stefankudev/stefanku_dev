@@ -1,18 +1,19 @@
-import cn from 'classnames'
-import css from './TitleCard.module.css'
+import cn from 'classnames';
+import css from './TitleCard.module.css';
+import Button from '../../components/Button/Button';
 
 interface TitleCardProps {
-  showAvailability?: boolean
-  availability?: boolean
-  preferredWork?: string[]
-  tagline?: string
+  showAvailability?: boolean;
+  availability?: boolean;
+  preferredWork?: string[];
+  tagline?: string;
 }
 
 export default function TitleCard({
   showAvailability = true,
   availability = true,
   preferredWork = ['Full Time Roles', 'Contract Roles'],
-  tagline = "Senior Engineer",
+  tagline = 'Senior Engineer',
 }: TitleCardProps) {
   return (
     <div className={cn(css.special, css.card)}>
@@ -36,7 +37,8 @@ export default function TitleCard({
                   <span id={cn(css.unavailable)}>❌ unavailable</span> for full time roles.
                   <br />
                   <br />
-                  Hit the 💬 button if you'd like me to get involved in an event/talk, freelance project, or anything else exciting!
+                  Hit the 💬 button if you'd like me to get involved in an event/talk, freelance
+                  project, or anything else exciting!
                 </span>
               )}
             </span>
@@ -49,23 +51,36 @@ export default function TitleCard({
               <li key={workItem}>{workItem}</li>
             ))}
           </ul>
-        ) : <></>}
+        ) : (
+          <></>
+        )}
 
         <section className={cn(css.contactButtonContainer)}>
-        <a href="./Stefan_Kudev_CV.pdf" target="_blank" rel="noreferrer">
-          <img className={cn(css.contactButtonLogo)} src="/logos/pdf.svg" alt="LinkedIn" />
-          &nbsp;Download CV
-        </a>
-        <a href="mailto:stefan.yanchev.kudev+website@gmail.com?subject=Reaching out to you from stefan-ku.dev">
-          <img className={cn(css.contactButtonLogo)} src="/logos/gmail.svg" alt="Gmail" />
-          &nbsp;Email
-        </a>
-        <a href="https://www.linkedin.com/in/stefankudev/" target="_blank" rel="noreferrer">
-          <img className={cn(css.contactButtonLogo)} src="/logos/linkedin.svg" alt="LinkedIn" />
-          &nbsp;LinkedIn
-        </a>
-      </section>
+          <Button
+            href="./Stefan_Kudev_CV.pdf"
+            label="Download CV"
+            logoSrc="/logos/pdf.svg"
+            logoAlt="PDF"
+            external
+            small
+          />
+          <Button
+            href="mailto:stefan.yanchev.kudev+website@gmail.com?subject=Reaching out to you from stefan-ku.dev"
+            label="Email"
+            logoSrc="/logos/gmail.svg"
+            logoAlt="Gmail"
+            small
+          />
+          <Button
+            href="https://www.linkedin.com/in/stefankudev/"
+            label="LinkedIn"
+            logoSrc="/logos/linkedin.svg"
+            logoAlt="LinkedIn"
+            external
+            small
+          />
+        </section>
       </div>
     </div>
-  )
+  );
 }
