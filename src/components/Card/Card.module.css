@@ -9,11 +9,6 @@
   transition: 0.2s all ease;
 }
 
-/* .card:hover {
-  transition: 0.2s all ease;
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
-} */
-
 h3 {
   letter-spacing: 0.9px;
   margin: 3px 0px;

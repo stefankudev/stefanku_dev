@@ -14,11 +14,6 @@
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
-#skillsCheckEmoji {
-  display: inline-block;
-  transform: rotate(-25deg) !important;
-}
-
 .fancyHr {
   border: none;
   height: 2px;
