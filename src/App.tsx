@@ -1,5 +1,5 @@
 import TitleCard from './sections/TitleCard/TitleCard'
-import SkillsCheck from './sections/VibeCheck/SkillsCheck'
+import SkillsCheck from './sections/SkillsCheck/SkillsCheck'
 import Testimonials from './sections/Testimonials/Testimonials'
 import Projects from './sections/Projects/Projects'
 import CommunityWork from './sections/Talks/CommunityWork'
