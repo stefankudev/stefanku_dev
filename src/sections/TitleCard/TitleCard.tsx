@@ -12,7 +12,7 @@ export default function TitleCard({
   showAvailability = true,
   availability = true,
   preferredWork = ['Full Time Roles', 'Contract Roles'],
-  tagline = "It's in the name",
+  tagline = "Senior Engineer",
 }: TitleCardProps) {
   return (
     <div className={cn(css.special, css.card)}>
@@ -42,15 +42,29 @@ export default function TitleCard({
             </span>
           </p>
         ) : null}
+
         {showAvailability && availability && preferredWork ? (
           <ul>
             {preferredWork.map((workItem) => (
               <li key={workItem}>{workItem}</li>
             ))}
           </ul>
-        ) : (
-          ' '
-        )}
+        ) : <></>}
+
+        <section className={cn(css.contactButtonContainer)}>
+        <a href="./Stefan_Kudev_CV.pdf" target="_blank" rel="noreferrer">
+          <img className={cn(css.contactButtonLogo)} src="/logos/pdf.svg" alt="LinkedIn" />
+          &nbsp;Download CV
+        </a>
+        <a href="mailto:stefan.yanchev.kudev+website@gmail.com?subject=Reaching out to you from stefan-ku.dev">
+          <img className={cn(css.contactButtonLogo)} src="/logos/gmail.svg" alt="Gmail" />
+          &nbsp;Email
+        </a>
+        <a href="https://www.linkedin.com/in/stefankudev/" target="_blank" rel="noreferrer">
+          <img className={cn(css.contactButtonLogo)} src="/logos/linkedin.svg" alt="LinkedIn" />
+          &nbsp;LinkedIn
+        </a>
+      </section>
       </div>
     </div>
   )
