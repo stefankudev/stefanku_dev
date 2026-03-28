@@ -39,10 +39,12 @@ export function Advocacy() {
   return (
     <Card title="Advocacy" titleSeperator>
       {Talks.map((talk, idx) => (
-        <Card key={idx}>
-          <h4 className={cn(css.talkTitle)}>{talk.title}</h4>
+        <Card key={idx} margin={"0 0 0.75rem"} padding={"0.2rem 0.5rem"}>
+          <div className={cn(css.content)}>
+            <h4 className={cn(css.talkTitle)}>{talk.title}</h4>
           <p className={cn(css.talkLocation)}>{talk.location}</p>
           <span className={cn(css.talkDate)}>📅 {talk.date}</span>
+          </div>
         </Card>
       ))}
      
@@ -54,7 +56,7 @@ export function Mentorship() {
   return (
     <Card title="Mentorship" titleSeperator>
       {Mentoring.map((talk, idx) => (
-        <Card key={idx}>
+        <Card key={idx} margin={"0 0 0.5rem"} padding={"0.2rem 0.5rem"}>
           <h4 className={cn(css.talkTitle)}>{talk.title}</h4>
           <p className={cn(css.talkLocation)}>{talk.location}</p>
           <span className={cn(css.talkDate)}>📅 {talk.date}</span>
