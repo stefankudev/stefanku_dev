@@ -19,6 +19,9 @@
     "sass": "^1.98.0"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^7.0.0"
+    "@astrojs/netlify": "^7.0.0",
+    "@typescript-eslint/parser": "^8.57.2",
+    "eslint": "^10.1.0",
+    "eslint-plugin-astro": "^1.6.0"
   }
 }
