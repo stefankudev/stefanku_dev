@@ -1,0 +1,81 @@
+---
+import Card from '../components/Card.astro';
+import ListItemCard from '../components/ListItemCard.astro';
+
+interface Hobby {
+  name: string;
+  content?: string[];
+}
+
+const hobbies: Hobby[] = [
+  {
+    name: '💰 Finance',
+    content: ['Budgeting', 'Stocks, Shares, Funds'],
+  },
+  {
+    name: '👟 Personal Fitness',
+    content: ['Gym-going', 'Scenic walks'],
+  },
+  {
+    name: '📚 Technical Reading',
+    content: ['Tech News', 'Guides', 'Opinion pieces'],
+  },
+  {
+    name: '📷 Photography',
+    content: ['Landscapes', 'Portraits', 'Long exposure'],
+  },
+  {
+    name: '☕ Coffee',
+    content: ['Exotic blends', 'Local roasters'],
+  },
+];
+---
+
+<Card title="Hobbies / Interests" titleSeperator>
+  {hobbies.map((hobby) => (
+    <ListItemCard>
+      <h4 class="hobby__title">{hobby.name}</h4>
+      <ul class="hobby__list">
+        {hobby.content?.map((item) => <li>{item}</li>)}
+      </ul>
+    </ListItemCard>
+  ))}
+</Card>
+
+<style lang="scss">
+  .hobby {
+    &__title {
+      font-size: 1.5rem;
+      letter-spacing: 0rem;
+      margin: 0.5rem 0.5rem 0 0.5rem;
+    }
+
+    &__list {
+      li {
+        opacity: 0.8;
+        margin: 0.25rem -1rem;
+        list-style-type: none;
+
+        &::before {
+          content: '⇾';
+          margin-right: 1rem;
+          opacity: 0.45;
+        }
+      }
+    }
+
+    &__link {
+      color: var(--color-accent-primary);
+      text-decoration-color: rgba(47, 88, 104, 0.8);
+
+      &:hover {
+        color: var(--color-accent-hover) !important;
+        text-decoration-color: rgba(47, 88, 104, 1);
+      }
+
+      &:visited {
+        color: var(--color-accent-primary);
+      }
+    }
+  }
+</style>

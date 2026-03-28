@@ -1,0 +1,59 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  logoSrc: string;
+  logoAlt: string;
+  external?: boolean;
+  small?: boolean;
+}
+
+const { href, label, logoSrc, logoAlt, external = false, small = false } = Astro.props;
+---
+
+<a
+  class:list={['button', small && 'button--small']}
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noreferrer' : undefined}
+>
+  <img class="button__logo" src={logoSrc} alt={logoAlt} />
+  &nbsp;{label}
+</a>
+
+<style lang="scss">
+  .button {
+    font-family: var(--font-family-heading);
+    font-weight: bold;
+    color: rgb(54, 64, 69);
+    background: rgba(255, 255, 255, 0.887);
+    text-decoration: none !important;
+    text-wrap: nowrap;
+    border-radius: var(--radius-default);
+    border: 1px solid white;
+    padding: 0.85rem 1.25rem;
+    margin: 0 0.5em;
+    transition: var(--transition-default);
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0));
+
+    &:hover {
+      text-decoration: none !important;
+      background: rgba(255, 255, 255, 1);
+      color: rgba(0, 0, 0, 1);
+      filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
+    }
+
+    &--small {
+      font-size: 0.8em;
+    }
+
+    &__logo {
+      width: 1.2em;
+      height: 1.2em;
+      aspect-ratio: 1/1;
+      display: inline-block;
+      padding: 0 0.2em;
+      margin: -0.175em auto;
+    }
+  }
+</style>

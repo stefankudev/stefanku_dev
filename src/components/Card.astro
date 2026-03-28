@@ -1,0 +1,92 @@
+---
+interface Props {
+  title?: string;
+  titleSeperator?: boolean;
+  style?: Record<string, string>;
+  margin?: string;
+  padding?: string;
+  variant?: 'default' | 'title' | 'project' | 'testimonial';
+}
+
+const {
+  title,
+  titleSeperator,
+  style = {},
+  margin,
+  padding,
+  variant = 'default',
+} = Astro.props;
+
+const variantClass = variant !== 'default' ? `card--${variant}` : '';
+---
+
+<div
+  class:list={['card', variantClass]}
+  style={{
+    ...style,
+    margin,
+    padding,
+  }}
+>
+  {title ? <h3 class="card__title">{title}</h3> : null}
+  {titleSeperator ? <hr class="card__divider" aria-hidden="true" /> : null}
+  <slot />
+</div>
+
+<style lang="scss">
+  @use '../styles/utilities' as *;
+
+  .card {
+    @extend %cardBase;
+    max-width: var(--card-max-width);
+    padding: 1.85rem;
+
+    &__title {
+      letter-spacing: 0.9px;
+      margin: 0.2rem 0;
+    }
+
+    &__divider {
+      @extend %fancyDivider;
+    }
+
+    &--title {
+      @extend %cardBase;
+      padding: 3em 2em;
+      max-width: 55rem;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      background: hsla(197, 61%, 50%, 0.15);
+
+      &:hover {
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    &--project {
+      @extend %cardBase;
+      padding: 1rem;
+      min-width: var(--card-min-width);
+      text-align: left;
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 1;
+        box-shadow: var(--shadow-card-project-hover);
+      }
+    }
+
+    &--testimonial {
+      @extend %cardBase;
+      display: flex;
+      padding: 1rem 1.5rem;
+      min-width: var(--card-min-width);
+      text-align: left;
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 1;
+        box-shadow: var(--shadow-card-hover);
+      }
+    }
+  }
+</style>
