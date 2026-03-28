@@ -1,5 +1,6 @@
 import cn from 'classnames';
-import css from './ProjectCard.module.css';
+import css from './ProjectCard.module.scss';
+import Card from '../Card/Card';
 import { techStackLogos } from '../../constants/techStackLogos';
 
 interface ProjectLink {
@@ -25,16 +26,16 @@ export default function ProjectCard({
   links = [{ url: '#', linkTitle: 'Sample link' }],
 }: ProjectCardProps) {
   return (
-    <article className={cn(css.card)}>
+    <Card variant="project">
       {video ? (
         <a
-          className={cn(css.projectThumbnailLink)}
+          className={cn(css.projectCard__thumbnailLink)}
           href={links[0].url}
           target="_blank"
           rel="noreferrer"
         >
           <video
-            className={cn(css.projectThumbnail)}
+            className={cn(css.projectCard__thumbnail)}
             autoPlay
             muted
             loop
@@ -44,39 +45,45 @@ export default function ProjectCard({
         </a>
       ) : (
         <a
-          className={cn(css.projectThumbnailLink)}
+          className={cn(css.projectCard__thumbnailLink)}
           href={links[0].url}
           target="_blank"
           rel="noreferrer"
         >
           <img
-            className={cn(css.projectThumbnail)}
+            className={cn(css.projectCard__thumbnail)}
             alt={'Showcase image for ' + title + ' project'}
             src={thumbnail}
           />
         </a>
       )}
-      <div className={cn(css.descriptionArea)}>
+      <div className={cn(css.projectCard__description)}>
         <h4>{title}</h4>
         <p>{description}</p>
         {techStack.map((techName) =>
           techName in techStackLogos ? (
             <img
               key={techName}
-              className={cn(css.techStackLogo)}
+              className={cn(css.projectCard__techLogo)}
               src={techStackLogos[techName]}
               alt={techName}
             />
           ) : null
         )}
-        <div className={cn(css.linksArea)}>
+        <div className={cn(css.projectCard__links)}>
           {links.map((el, idx) => (
-            <a key={idx} href={el.url} target="_blank" rel="noreferrer">
+            <a
+              key={idx}
+              className={cn(css.projectCard__link)}
+              href={el.url}
+              target="_blank"
+              rel="noreferrer"
+            >
               {el.linkTitle} &rarr;
             </a>
           ))}
         </div>
       </div>
-    </article>
+    </Card>
   );
 }

@@ -1,0 +1,31 @@
+@use 'styles';
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(90deg, #2a3035, #171a1d);
+  background-size: calc(100vw) 100%;
+  height: 100%;
+  width: calc(100% - 10px);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+  font-family: var(--font-family-body);
+  min-width: 35rem !important;
+  transition: all 0.75s ease-in-out;
+}
+
+.blur {
+  filter: blur(2.5em) !important;
+  user-select: none;
+  pointer-events: none;
+}
+
+.footer {
+  color: var(--color-text-primary);
+}

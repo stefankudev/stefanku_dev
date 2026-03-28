@@ -1,0 +1,17 @@
+.underConstruction {
+  &__container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgba(255, 255, 0, 0.02);
+    border-radius: var(--radius-default);
+  }
+
+  &__text {
+    color: rgba(255, 255, 0, 0.705);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.25em;
+  }
+}

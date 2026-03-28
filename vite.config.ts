@@ -11,7 +11,7 @@ export default defineConfig({
       closeBundle() {
         const distDir = resolve('dist');
         const psdFiles = ['stefankudev-bubble-logo.psd', 'bubble_logo.psd'];
-        psdFiles.forEach(file => {
+        psdFiles.forEach((file) => {
           const filePath = resolve(distDir, file);
           if (fs.existsSync(filePath)) {
             fs.unlinkSync(filePath);

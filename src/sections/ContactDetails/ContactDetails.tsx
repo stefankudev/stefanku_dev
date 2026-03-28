@@ -1,13 +1,13 @@
 import cn from 'classnames';
-import css from './ContactDetails.module.css';
+import css from './ContactDetails.module.scss';
 import Button from '../../components/Button/Button';
 import { EMAIL_URL, LINKEDIN_URL, TELEGRAM_URL, MESSENGER_URL } from '../../constants/links';
 
 export default function ContactDetails() {
   return (
-    <footer className={cn(css.footer)}>
-      <section className={css.contactText}>Contact me via:</section>
-      <section className={cn(css.contactButtonContainer)}>
+    <footer className={cn(css.contactDetails__footer)}>
+      <section className={cn(css.contactDetails__text)}>Contact me via:</section>
+      <section className={cn(css.contactDetails__buttons)}>
         <Button href={EMAIL_URL} label="Email" logoSrc="/logos/gmail.svg" logoAlt="Gmail" />
         <Button
           href={LINKEDIN_URL}
@@ -31,7 +31,7 @@ export default function ContactDetails() {
           external
         />
       </section>
-      <div className={css.rainbowBackground}></div>
+      <div className={css.contactDetails__rainbow}></div>
     </footer>
   );
 }

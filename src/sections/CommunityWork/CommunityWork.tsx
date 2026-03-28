@@ -1,7 +1,7 @@
 import Card from '../../components/Card/Card';
 import ListItemCard from '../../components/ListItemCard/ListItemCard';
 import cn from 'classnames';
-import css from './CommunityWork.module.css';
+import css from './CommunityWork.module.scss';
 
 interface Item {
   title: string;
@@ -19,10 +19,10 @@ function ItemList({ title, items }: ItemListProps) {
     <Card title={title} titleSeperator>
       {items.map((item, idx) => (
         <ListItemCard key={idx}>
-          <div className={cn(css.content)}>
-            <h4 className={cn(css.talkTitle)}>{item.title}</h4>
-            <p className={cn(css.talkLocation)}>{item.location}</p>
-            <span className={cn(css.talkDate)}>📅 {item.date}</span>
+          <div className={cn(css.talk__content)}>
+            <h4 className={cn(css.talk__title)}>{item.title}</h4>
+            <p className={cn(css.talk__location)}>{item.location}</p>
+            <span className={cn(css.talk__date)}>📅 {item.date}</span>
           </div>
         </ListItemCard>
       ))}

@@ -1,7 +1,8 @@
 import cn from 'classnames';
-import css from './TitleCard.module.css';
+import css from './TitleCard.module.scss';
 import Button from '../../components/Button/Button';
 import { CV_URL, EMAIL_URL, LINKEDIN_URL } from '../../constants/links';
+import Card from '../../components/Card/Card';
 
 interface TitleCardProps {
   showAvailability?: boolean;
@@ -11,7 +12,8 @@ interface TitleCardProps {
 
 const renderAvailabilitySection = () => (
   <p>
-    I'm currently <span id={cn(css.available)}>✅ available</span> for full time and contract roles.
+    I'm currently <span className={cn(css.titleCard__availability)}>✅ available</span> for full
+    time and contract roles.
   </p>
 );
 
@@ -20,17 +22,21 @@ export default function TitleCard({
   tagline = 'Senior Engineer',
 }: TitleCardProps) {
   return (
-    <div className={cn(css.special, css.card)}>
-      <img id={cn(css.profilePicture)} src="/Stefan_Kudev.jpg" alt="A photograph of Stefan Kudev" />
-      <h1>
+    <Card variant="title">
+      <img
+        className={cn(css.titleCard__profileImg)}
+        src="/Stefan_Kudev.jpg"
+        alt="A photograph of Stefan Kudev"
+      />
+      <h1 className={cn(css.titleCard__name)}>
         Stefan Ku<em>dev</em>
       </h1>
-      <h2>{tagline}</h2>
-      <hr className={cn(css.fancyHr)} />
-      <div className={cn(css.titleCardParagraphs)}>
+      <h2 className={cn(css.titleCard__tagline)}>{tagline}</h2>
+      <hr className={cn(css.titleCard__divider)} />
+      <div className={cn(css.titleCard__paragraphs)}>
         {showAvailability && renderAvailabilitySection()}
 
-        <section className={cn(css.contactButtonContainer)}>
+        <section className={cn(css.titleCard__contactButtons)}>
           <Button
             href={CV_URL}
             label="Download CV"
@@ -50,6 +56,6 @@ export default function TitleCard({
           />
         </section>
       </div>
-    </div>
+    </Card>
   );
 }

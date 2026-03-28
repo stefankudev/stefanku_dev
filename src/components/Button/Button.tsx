@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import css from './Button.module.css';
+import css from './Button.module.scss';
 
 interface ButtonProps {
   href: string;
@@ -20,12 +20,12 @@ export default function Button({
 }: ButtonProps) {
   return (
     <a
-      className={cn(css.button, small && css.small)}
+      className={cn(css.button, small && css['button--small'])}
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noreferrer' : undefined}
     >
-      <img className={cn(css.logo)} src={logoSrc} alt={logoAlt} />
+      <img className={cn(css.button__logo)} src={logoSrc} alt={logoAlt} />
       &nbsp;{label}
     </a>
   );

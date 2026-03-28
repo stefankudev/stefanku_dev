@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import Card from '../../components/Card/Card';
 import ListItemCard from '../../components/ListItemCard/ListItemCard';
 import cn from 'classnames';
-import css from './Hobbies.module.css';
+import css from './Hobbies.module.scss';
 
 interface Hobby {
   name: string;
@@ -37,8 +37,8 @@ export default function Hobbies() {
     <Card title="Hobbies / Interests" titleSeperator>
       {MyHobbies.map((hobby, idx) => (
         <ListItemCard key={idx}>
-          <h4 className={cn(css.hobbyTitle)}>{hobby.name}</h4>
-          <ul className={cn(css.hobbyList)}>
+          <h4 className={cn(css.hobby__title)}>{hobby.name}</h4>
+          <ul className={cn(css.hobby__list)}>
             {hobby.content ? hobby.content.map((el, i) => <li key={i}>{el}</li>) : null}
           </ul>
         </ListItemCard>
