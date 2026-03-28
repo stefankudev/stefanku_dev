@@ -56,8 +56,8 @@ const { showAvailability = true, tagline = 'Senior Engineer' } = Astro.props;
 </Card>
 
 <style lang="scss">
-  @import '../styles/utilities';
-  @import '../styles/animations';
+  @use '../styles/utilities' as utilities;
+  @use '../styles/animations' as animations;
 
   .titleCard {
     &__profileImg {
