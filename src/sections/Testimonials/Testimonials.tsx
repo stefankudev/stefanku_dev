@@ -16,19 +16,19 @@ const MyTestimonials: Testimonial[] = [
   {
     visible: true,
     name: 'Steve Krause',
-    jobTitle: 'Senior Director  •  Getty Images',
+    jobTitle: 'Senior Director  |  Getty Images',
     text: (
       <>
         <b>Stefan is a dream employee. He's creative, highly skilled, intelligent and highly motivated.</b>{' '}
-        This of course is not easy, being that Stefan works remote, as it requires self-motivation and the attributes of a self-starter. No job is too large or small for Stefan. At all times, he rises to the occasion.
+        This of course is not easy, being that Stefan works remote, as it requires self-motivation and the attributes of a self-starter. No job is too large or small for him - at all times, he rises to the occasion.
       </>
     ),
     photo: '/photos/Steve_Krause_gP.jpg',
   },
   {
-    visible: true,
+    visible: false,
     name: 'Christin Weigel',
-    jobTitle: 'Senior Manager  •  QualityTaskForce',
+    jobTitle: 'Senior Manager  |  QualityTaskForce',
     text: (
       <>
         Stefan always shows initiative and continuously looks for new ways to get involved.{' '}
@@ -40,23 +40,21 @@ const MyTestimonials: Testimonial[] = [
   {
     visible: true,
     name: 'David Hall',
-    jobTitle: 'Managing Director  •  Virgin Money',
+    jobTitle: 'Managing Director  |  Virgin Money',
     text: (
       <>
-        Stefan really impressed us with his submission to the first round of LifeStart Challenges from Virgin.{' '}
-        <b>He has a holistic understanding of consumer markets and that he knows how to think laterally to meet customer need.</b>
+        Stefan has a holistic understanding of consumer markets and knows how to think laterally to meet customer need.
       </>
     ),
     photo: '/photos/David_Hall_Virgin_Money_LS.jpg',
   },
   {
-    visible: false,
+    visible: true,
     name: 'Emanuel Halatchev',
-    jobTitle: 'Founder  •  AIBC',
+    jobTitle: 'Founder  |  AIBC',
     text: (
       <>
-        We worked with Stefan at our American Information and Business Center project. He was involved in most of the marketing and all of the creative work.{' '}
-        <b>So here's how it went: we have an idea, we polish it, we share it with Stefan and then a small miracle is born, usually way beyond our imagination.</b> I really cannot say enough about his creative vision, angles, capacity and range.
+        We worked with Stefan at our American Information and Business Center project. So here's how it went: we have an idea, we polish it, we share it with Stefan and then a small miracle is born, usually way beyond our imagination.
       </>
     ),
     photo: '/photos/Emanuel_Halatchev_AIBC.jpg',
@@ -64,10 +62,10 @@ const MyTestimonials: Testimonial[] = [
   {
     visible: true,
     name: 'Alex Goss',
-    jobTitle: 'Product Manager  •  Usborne Foundation',
+    jobTitle: 'Product Manager  |  Usborne Foundation',
     text: (
       <>
-        <b>Stefan has delivered over and above what's expected of him in his role, planning improvements and executing them well.</b> Teach Your Monster to Read's mission is to help millions of children learn to read, and Stefan takes this on board. He's always thinking about how he can make the biggest impact.
+        <b>Stefan has delivered over and above what's expected of him in his role, planning improvements and executing them well.</b> Our company's mission is to help millions of children learn to read, and Stefan takes this on board. He's always thinking about how he can make the biggest impact.
       </>
     ),
     photo: '/photos/Alex_Goss_Usborne.jpg',
@@ -75,7 +73,7 @@ const MyTestimonials: Testimonial[] = [
   {
     visible: false,
     name: 'Karl Harker',
-    jobTitle: 'Senior Marketer  •  Packt Publishing',
+    jobTitle: 'Senior Marketer  |  Packt Publishing',
     text: (
       <>
         Stefan worked on a huge range of responsibilities - designing for web, copywriting, developing his excellent understanding of our users, and executing multi-channel campaigns.{' '}
@@ -87,11 +85,10 @@ const MyTestimonials: Testimonial[] = [
   {
     visible: true,
     name: 'Ghie Berry',
-    jobTitle: 'Head of Partnerships  •  Day Out With The Kids',
+    jobTitle: 'Head of Partnerships  |  Day Out With The Kids',
     text: (
       <>
-        Stefan bonded with the team straight away, which is a huge testament to his warm and friendly personality. He has managed a raft of priorities incredibly well -{' '}
-        <b>I am blown away by the quality of work and his evident commercial intelligence.</b> Overall, I really couldn't have recruited better in terms of the big picture.
+        Stefan bonded with the team straight away, which is a huge testament to his warm and friendly personality. He has managed a raft of priorities incredibly well -{' '}<b>I am blown away by the quality of work and his evident commercial intelligence.</b> Overall, I really couldn't have recruited better in terms of the big picture.
       </>
     ),
     photo: '/photos/Ghie_Berry_DOWTK.jpg',
@@ -99,18 +96,18 @@ const MyTestimonials: Testimonial[] = [
   {
     visible: false,
     name: 'Jamie Starr',
-    jobTitle: 'Head of Marketing  •  Day Out With The Kids',
+    jobTitle: 'Head of Marketing  |  Day Out With The Kids',
     text: (
       <>
-        <b>Stefan's design skills are a massive asset to the business.</b> I think very highly of him and I think he needs to be nurtured as one of the next generation of leaders within this business.
+        <b>Stefan's design skills are a massive asset to the business.</b> I think very highly of him and I think he needs to be nurtured as one of the next generation leaders within this business.
       </>
     ),
     photo: '/photos/Jamie_Starr_DOWTK.jpg',
   },
   {
-    visible: true,
+    visible: false,
     name: 'Daniel Mahon',
-    jobTitle: 'Head of Tech  •  Day Out With The Kids',
+    jobTitle: 'Head of Tech  |  Day Out With The Kids',
     text: (
       <>
         <b>Stefan is a really nice guy with a huge potential for growth.</b> I really believe he has the ability to push us forward as a company in a multitude of ways.
@@ -118,21 +115,43 @@ const MyTestimonials: Testimonial[] = [
     ),
     photo: '/photos/Daniel_Mahon_DOWTK.jpg',
   },
+  {
+    visible: false,
+    name: 'Person Person',
+    jobTitle: 'JobtitleJobtitle  |  Hargreaves Lansdown',
+    text: (
+      <>
+        TODO: Export all the feedback from Workday and add it here. This is a placeholder testimonial.
+      </>
+    ),
+    photo: '/photos/PersonPerson_Hargreaves_Lansdown.jpg',
+  },
 ]
 
 const VisibleTestimonials = MyTestimonials.filter((el) => el.visible)
 
-export default function Testimonials() {
+interface TestimonialsProps {
+  useCarousel?: boolean;
+}
+
+const renderVisibleTestimonials = () => VisibleTestimonials.map((testimonial, idx) => (
+  <div key={idx} style={{ padding: '0.75rem', margin: '0 auto' }}>
+    <TestimonialCard {...testimonial} />
+    <br />
+  </div>
+))
+export default function Testimonials({ useCarousel }: TestimonialsProps) {
   return (
     <Card title="Testimonials" titleSeperator>
-      <Carousel autoPlay interval={5000} infiniteLoop stopOnHover emulateTouch showArrows={false} showStatus={false} showThumbs={false}>
-        {VisibleTestimonials.map((testimonial, idx) => (
-          <div key={idx} style={{ padding: '0.75rem', margin: '0 auto' }}>
-            <TestimonialCard {...testimonial} />
-            <br />
-          </div>
-        ))}
-      </Carousel>
+      {useCarousel ? (
+        <Carousel autoPlay interval={5000} infiniteLoop stopOnHover emulateTouch showArrows={false} showStatus={false} showThumbs={false}>
+          {renderVisibleTestimonials()}
+        </Carousel>
+      ) : (
+        <div>
+          {renderVisibleTestimonials()}
+        </div>
+      )}
     </Card>
   )
 }

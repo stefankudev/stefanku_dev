@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button';
 export default function ContactDetails() {
   return (
     <footer className={cn(css.footer)}>
-      <section className={css.contactText}>You can reach me via:</section>
+      <section className={css.contactText}>Contact me via:</section>
       <section className={cn(css.contactButtonContainer)}>
         <Button
           href="mailto:stefan.yanchev.kudev+website@gmail.com?subject=Reaching out to you from stefan-ku.dev"

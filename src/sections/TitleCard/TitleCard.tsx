@@ -4,15 +4,18 @@ import Button from '../../components/Button/Button';
 
 interface TitleCardProps {
   showAvailability?: boolean;
-  availability?: boolean;
   preferredWork?: string[];
   tagline?: string;
 }
 
+const renderAvailabilitySection = () => (
+  <p>
+    I'm currently <span id={cn(css.available)}>✅ available</span> for full time and contract roles.
+  </p>
+)
+
 export default function TitleCard({
   showAvailability = true,
-  availability = true,
-  preferredWork = ['Full Time Roles', 'Contract Roles'],
   tagline = 'Senior Engineer',
 }: TitleCardProps) {
   return (
@@ -24,36 +27,8 @@ export default function TitleCard({
       <h2>{tagline}</h2>
       <hr className={cn(css.fancyHr)} />
       <div className={cn(css.titleCardParagraphs)}>
-        {showAvailability ? (
-          <p>
-            I'm currently{' '}
-            <span>
-              {availability ? (
-                <span>
-                  <span id={cn(css.available)}>✅ available</span> for:
-                </span>
-              ) : (
-                <span>
-                  <span id={cn(css.unavailable)}>❌ unavailable</span> for full time roles.
-                  <br />
-                  <br />
-                  Hit the 💬 button if you'd like me to get involved in an event/talk, freelance
-                  project, or anything else exciting!
-                </span>
-              )}
-            </span>
-          </p>
-        ) : null}
 
-        {showAvailability && availability && preferredWork ? (
-          <ul>
-            {preferredWork.map((workItem) => (
-              <li key={workItem}>{workItem}</li>
-            ))}
-          </ul>
-        ) : (
-          <></>
-        )}
+        {showAvailability && renderAvailabilitySection()}
 
         <section className={cn(css.contactButtonContainer)}>
           <Button
