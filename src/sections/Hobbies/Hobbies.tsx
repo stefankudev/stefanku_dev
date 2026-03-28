@@ -10,16 +10,20 @@ interface Hobby {
 
 const MyHobbies: Hobby[] = [
   {
-    name: '📷 Photography',
-    content: [<>Landscape</>, <>Portrait</>, <>Nighttime</>],
-  },
-    {
     name: '💰 Personal Finance',
-    content: [<>Budgeting</>, <>Stocks and Shares ISAs</>, <>Pensions</>],
+    content: [<>Budgeting</>, <>Stocks, Shares, Funds</>],
   },
   {
     name: '👟 Personal Fitness',
-    content: [< >Gym-going</>, <>Scenic walks</>, <>Meditation</>],
+    content: [< >Gym-going</>, <>Scenic walks</>],
+  },
+  {
+    name: '📷 Photography',
+    content: [<>Landscapes</>, <>Portraits</>, <>Long exposure</>],
+  },
+  {
+    name: '☕ Coffee',
+    content: [<>Exotic blends</>, <>Local roasters</>],
   },
 ]
 
@@ -27,7 +31,7 @@ export default function Hobbies() {
   return (
     <Card title="Hobbies / Interests" titleSeperator>
       {MyHobbies.map((hobby, idx) => (
-        <Card key={idx} padding={"0.35rem"}>
+        <Card key={idx} margin={"0 0 0.5rem"} padding={"0.2rem 0.5rem"}>
           <h4 className={cn(css.hobbyTitle)}>{hobby.name}</h4>
           <ul className={cn(css.hobbyList)}>
             {hobby.content ? hobby.content.map((el, i) => <li key={i}>{el}</li>) : null}
