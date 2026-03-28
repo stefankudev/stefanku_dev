@@ -1,9 +1,12 @@
+@use '../../styles/utilities' as *;
+
 .talk {
   &__content {
     padding: 1rem;
   }
 
   &__title {
+    @extend %sectionTitle;
     margin: 0 0 0.25rem 0 !important;
   }
 

@@ -1,7 +1,7 @@
 @use '../../styles/utilities' as *;
 
 .card {
-  @extend %card-base;
+  @extend %cardBase;
   max-width: var(--card-max-width);
   padding: 30px;
 
@@ -11,11 +11,11 @@
   }
 
   &__divider {
-    @extend %fancyHr;
+    @extend %fancyDivider;
   }
 
   &--title {
-    @extend %card-base;
+    @extend %cardBase;
     padding: 3em 2em;
     max-width: 850px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@
   }
 
   &--project {
-    @extend %card-base;
+    @extend %cardBase;
     padding: 15px;
     min-width: var(--card-min-width);
     text-align: left;
@@ -40,7 +40,7 @@
   }
 
   &--testimonial {
-    @extend %card-base;
+    @extend %cardBase;
     display: flex;
     padding: 1rem 1.5rem;
     min-width: var(--card-min-width);

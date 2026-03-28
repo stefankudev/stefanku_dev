@@ -1,4 +1,4 @@
-%card-base {
+%cardBase {
   margin: 15px auto;
   padding: 20px;
   background-color: var(--color-bg-card);
@@ -8,7 +8,7 @@
   transition: var(--transition-default);
 }
 
-%fancyHr {
+%fancyDivider {
   border: none;
   height: 2px;
   border-radius: 99em;
@@ -40,4 +40,9 @@
   width: 2em;
   height: 2em;
   border-radius: 0.5em;
+}
+
+%sectionTitle {
+  font-size: 1.5rem;
+  letter-spacing: 0rem;
 }
