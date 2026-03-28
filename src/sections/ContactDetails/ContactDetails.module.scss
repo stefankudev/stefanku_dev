@@ -14,24 +14,20 @@
     font-family: var(--font-family-heading);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 50px auto 0;
+    margin: 3.15rem auto 0;
   }
 
   &__buttons {
     @extend %contactButtonContainer;
-    padding: 35px;
+    padding: 2.25rem;
     margin-bottom: 10rem;
     line-height: 4rem;
   }
 
-  &__divider {
-    @extend %fancyDivider;
-  }
-
   &__rainbow {
     position: fixed;
-    width: 500px;
-    height: 500px;
+    width: 31.25rem;
+    height: 31.25rem;
     bottom: -35%;
     left: calc(50% - 7rem);
     color: black;

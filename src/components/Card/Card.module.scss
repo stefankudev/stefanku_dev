@@ -3,11 +3,11 @@
 .card {
   @extend %cardBase;
   max-width: var(--card-max-width);
-  padding: 30px;
+  padding: 1.85rem;
 
   &__title {
     letter-spacing: 0.9px;
-    margin: 3px 0px;
+    margin: 0.2rem 0;
   }
 
   &__divider {
@@ -17,7 +17,7 @@
   &--title {
     @extend %cardBase;
     padding: 3em 2em;
-    max-width: 850px;
+    max-width: 55rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     background: hsla(197, 61%, 50%, 0.15);
 
@@ -28,7 +28,7 @@
 
   &--project {
     @extend %cardBase;
-    padding: 15px;
+    padding: 1rem;
     min-width: var(--card-min-width);
     text-align: left;
     opacity: 0.9;
