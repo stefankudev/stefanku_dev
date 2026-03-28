@@ -1,12 +1,12 @@
-import type { ReactNode } from 'react'
-import cn from 'classnames'
-import css from './TestimonialCard.module.css'
+import type { ReactNode } from 'react';
+import cn from 'classnames';
+import css from './TestimonialCard.module.css';
 
 interface TestimonialCardProps {
-  name?: string
-  jobTitle?: string
-  text?: ReactNode
-  photo?: string
+  name?: string;
+  jobTitle?: string;
+  text?: ReactNode;
+  photo?: string;
 }
 
 export default function TestimonialCard({
@@ -26,5 +26,5 @@ export default function TestimonialCard({
         <p className={cn(css.testimonialText)}>{text}</p>
       </div>
     </div>
-  )
+  );
 }

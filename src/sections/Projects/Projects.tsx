@@ -1,4 +1,4 @@
-import Card from '../../components/Card/Card'
+import Card from '../../components/Card/Card';
 
 // ### 3. Projects
 // - Add 2-3 personal projects
@@ -30,5 +30,5 @@ export default function Projects() {
         links={[{ url: 'https://iternal.app/sign-up', linkTitle: 'Sign up' }]}
       /> */}
     </Card>
-  )
+  );
 }
