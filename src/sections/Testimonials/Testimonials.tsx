@@ -135,10 +135,7 @@ interface TestimonialsProps {
 }
 
 const renderVisibleTestimonials = () => VisibleTestimonials.map((testimonial, idx) => (
-  <div key={idx} style={{ padding: '0.75rem', margin: '0 auto' }}>
-    <TestimonialCard {...testimonial} />
-    <br />
-  </div>
+    <TestimonialCard key={idx} {...testimonial} />
 ))
 export default function Testimonials({ useCarousel }: TestimonialsProps) {
   return (

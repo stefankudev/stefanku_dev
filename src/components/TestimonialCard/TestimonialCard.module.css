@@ -1,20 +1,16 @@
-.testimonialCard {
-    display: flex;
-}
-
 .testimonialName {
     text-decoration: none;
-}
-
-.flexItem {
-    padding: 12px;
+    margin: 0.5rem 0 0.25rem;
 }
 
 .testimonialImg {
     height: 125px !important;
     width: 125px !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
     border-radius: 999em;
     pointer-events: none;
+    margin: 0 1.25rem 2rem 0;
+    opacity: 0.8;
 }
 
 .testimonialJobTitle {
@@ -28,7 +24,6 @@
 .testimonialText {
     line-height: 1.5rem;
     text-align: justify;
-    padding-right: 10px;
     font-size: 1.1em;
     letter-spacing: 0.25px;
     color: rgba(255, 255, 255, 0.85);
@@ -39,8 +34,9 @@
 }
 
 .card {
-    margin: 12px auto auto;
-    padding: 15px;
+    display: flex;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
     background-color: hsla(200, 16%, 25%, 0.6);
     color: white;
     border-radius: 0.5em;
