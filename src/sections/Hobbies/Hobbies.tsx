@@ -10,12 +10,16 @@ interface Hobby {
 
 const MyHobbies: Hobby[] = [
   {
-    name: '💰 Personal Finance',
+    name: '💰 Finance',
     content: [<>Budgeting</>, <>Stocks, Shares, Funds</>],
   },
   {
     name: '👟 Personal Fitness',
     content: [< >Gym-going</>, <>Scenic walks</>],
+  },
+  {
+    name: '📚 Technical Reading',
+    content: [<>Techh News</>, <>Guides</>, <>Opinion pieces</>],
   },
   {
     name: '📷 Photography',

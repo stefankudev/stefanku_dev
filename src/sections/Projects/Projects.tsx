@@ -1,9 +1,15 @@
 import Card from '../../components/Card/Card'
 
+// ### 3. Projects
+// - Add 2-3 personal projects
+// - Reframe existing projects to highlight senior skills, scale, architecture decisions
+// - Add architecture diagrams for each project
+// - Add "Key Challenges" to project descriptions
+// - Showcase: TDD, security, cost optimization
+
 export default function Projects() {
   return (
     <Card title="Featured Projects" titleSeperator>
-      <p>TBC...</p>
       {/* <ProjectCard
         thumbnail="/projectImages/powagile/powagile.jpg"
         video="/projectImages/powagile/powagile.webm"
