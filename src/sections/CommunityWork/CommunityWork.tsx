@@ -1,4 +1,5 @@
 import Card from '../../components/Card/Card';
+import ListItemCard from '../../components/ListItemCard/ListItemCard';
 import cn from 'classnames';
 import css from './CommunityWork.module.css';
 
@@ -11,20 +12,19 @@ interface Item {
 interface ItemListProps {
   title: string;
   items: Item[];
-  margin?: string;
 }
 
 function ItemList({ title, items }: ItemListProps) {
   return (
     <Card title={title} titleSeperator>
       {items.map((item, idx) => (
-        <Card key={idx} margin={'0 0 0.85rem'} padding={'0.2rem 0.5rem'}>
+        <ListItemCard key={idx}>
           <div className={cn(css.content)}>
             <h4 className={cn(css.talkTitle)}>{item.title}</h4>
             <p className={cn(css.talkLocation)}>{item.location}</p>
             <span className={cn(css.talkDate)}>📅 {item.date}</span>
           </div>
-        </Card>
+        </ListItemCard>
       ))}
     </Card>
   );

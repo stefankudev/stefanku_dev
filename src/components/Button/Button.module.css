@@ -5,12 +5,12 @@
   background: rgba(255, 255, 255, 0.887);
   text-decoration: none !important;
   text-wrap: nowrap;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-default);
   border: 1px solid white;
   padding: 0.85rem 1.25rem;
   margin: 0 0.5em;
-  transition: 0.2s all ease;
-    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0));
+  transition: var(--transition-default);
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0));
 }
 
 .button:hover {

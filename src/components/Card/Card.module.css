@@ -3,10 +3,10 @@
   padding: 30px;
   background-color: rgba(40, 50, 55, 0.6);
   color: white;
-  border-radius: 0.5em;
+  border-radius: var(--radius-default);
   max-width: 750px;
   cursor: default;
-  transition: 0.2s all ease;
+  transition: var(--transition-default);
 }
 
 h3 {
@@ -26,4 +26,5 @@ h3 {
     rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.05)
   );
+  margin: 20px 0;
 }

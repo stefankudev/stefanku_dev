@@ -19,7 +19,7 @@
   padding: 35px;
   margin-bottom: 10rem;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-default);
   z-index: 999;
   opacity: 1;
   line-height: 4rem;
