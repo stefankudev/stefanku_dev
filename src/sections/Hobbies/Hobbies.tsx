@@ -35,7 +35,7 @@ export default function Hobbies() {
   return (
     <Card title="Hobbies / Interests" titleSeperator>
       {MyHobbies.map((hobby, idx) => (
-        <Card key={idx} margin={"0 0 0.5rem"} padding={"0.2rem 0.5rem"}>
+        <Card key={idx} margin={'0 0 0.85rem'} padding={'0.2rem 0.5rem'}>
           <h4 className={cn(css.hobbyTitle)}>{hobby.name}</h4>
           <ul className={cn(css.hobbyList)}>
             {hobby.content ? hobby.content.map((el, i) => <li key={i}>{el}</li>) : null}

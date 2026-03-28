@@ -14,11 +14,11 @@ interface ItemListProps {
   margin?: string;
 }
 
-function ItemList({ title, items, margin = '0 0 0.75rem' }: ItemListProps) {
+function ItemList({ title, items }: ItemListProps) {
   return (
     <Card title={title} titleSeperator>
       {items.map((item, idx) => (
-        <Card key={idx} margin={margin} padding={'0.2rem 0.5rem'}>
+        <Card key={idx} margin={'0 0 0.85rem'} padding={'0.2rem 0.5rem'}>
           <div className={cn(css.content)}>
             <h4 className={cn(css.talkTitle)}>{item.title}</h4>
             <p className={cn(css.talkLocation)}>{item.location}</p>
@@ -61,5 +61,5 @@ export function Advocacy() {
 }
 
 export function Mentorship() {
-  return <ItemList title="Mentorship" items={mentorshipItems} margin="0 0 0.5rem" />;
+  return <ItemList title="Mentorship" items={mentorshipItems} />;
 }
