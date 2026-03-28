@@ -34,7 +34,8 @@ const variantClass = variant !== 'default' ? `card--${variant}` : '';
 </div>
 
 <style lang="scss">
-  @use '../styles/utilities' as *;
+  @import '../styles/utilities';
+  @import '../styles/animations';
 
   .card {
     @extend %cardBase;

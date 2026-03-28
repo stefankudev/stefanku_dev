@@ -23,6 +23,10 @@ const {
     <meta name="description" content={description} />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
+    <link rel="preload" href="/fonts/Raleway-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
   </head>
   <body>
@@ -31,11 +35,7 @@ const {
 </html>
 
 <style is:global>
-  @use '../styles/variables' as *;
-  @use '../styles/typography';
-  @use '../styles/scrollbar';
-  @use '../styles/animations';
-  @use '../styles/utilities';
+  @import '../styles/index.scss';
 
   html {
     min-height: 100%;
