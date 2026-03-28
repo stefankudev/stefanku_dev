@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'typography';
-@import 'scrollbar';
-@import 'animations';
-@import 'utilities';
+@forward 'variables';
+@forward 'typography';
+@forward 'scrollbar';
+@forward 'animations';
+@forward 'utilities';
