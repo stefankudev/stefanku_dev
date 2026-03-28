@@ -1,6 +1,6 @@
 import TitleCard from './sections/TitleCard/TitleCard'
 import Testimonials from './sections/Testimonials/Testimonials'
-import CommunityWork from './sections/Talks/CommunityWork'
+import {Advocacy, Mentorship} from './sections/CommunityWork/CommunityWork'
 import Hobbies from './sections/Hobbies/Hobbies'
 import ContactDetails from './sections/ContactDetails/ContactDetails'
 
@@ -9,7 +9,8 @@ function App() {
     <main>
       <TitleCard showAvailability={false}/>
       <Testimonials/>
-      <CommunityWork />
+      <Mentorship />
+      <Advocacy />
       <Hobbies />
       <ContactDetails />
     </main>
