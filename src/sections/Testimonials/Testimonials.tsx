@@ -1,6 +1,4 @@
 import type { ReactElement } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Card from '../../components/Card/Card';
 import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 
@@ -155,34 +153,15 @@ const MyTestimonials: Testimonial[] = [
 
 const VisibleTestimonials = MyTestimonials.filter((el) => el.visible);
 
-interface TestimonialsProps {
-  useCarousel?: boolean;
-}
-
 const renderVisibleTestimonials = () =>
   VisibleTestimonials.map((testimonial) => (
     <TestimonialCard key={testimonial.name} {...testimonial} />
   ));
 
-export default function Testimonials({ useCarousel }: TestimonialsProps) {
+export default function Testimonials() {
   return (
     <Card title="Testimonials" titleSeperator>
-      {useCarousel ? (
-        <Carousel
-          autoPlay
-          interval={5000}
-          infiniteLoop
-          stopOnHover
-          emulateTouch
-          showArrows={false}
-          showStatus={false}
-          showThumbs={false}
-        >
-          {renderVisibleTestimonials()}
-        </Carousel>
-      ) : (
-        <div>{renderVisibleTestimonials()}</div>
-      )}
+      <div>{renderVisibleTestimonials()}</div>
     </Card>
   );
 }
