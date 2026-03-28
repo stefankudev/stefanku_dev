@@ -1,6 +1,5 @@
 
 import Card from '../../components/Card/Card'
-import MoreComingSoon from '../../components/MoreComingSoon/MoreComingSoon'
 import cn from 'classnames'
 import css from './Talks.module.css'
 
@@ -38,7 +37,7 @@ const Teaching: Talk[] = [
 
 export default function CommunityWork() {
   return (
-    <Card title="Community Work & Tech Talks" titleSeperator>
+    <Card title="Mentorship & Advocacy" titleSeperator>
       {Talks.map((talk, idx) => (
         <Card key={idx}>
           <h4 className={cn(css.talkTitle)}>{talk.title}</h4>
@@ -53,7 +52,6 @@ export default function CommunityWork() {
           <span className={cn(css.talkDate)}>📅 {talk.date}</span>
         </Card>
       ))}
-      <MoreComingSoon />
     </Card>
   )
 }
