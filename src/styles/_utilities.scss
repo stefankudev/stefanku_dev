@@ -6,6 +6,7 @@
   border-radius: var(--radius-default);
   cursor: default;
   transition: var(--transition-default);
+  z-index: 5;
 }
 
 %fancyDivider {

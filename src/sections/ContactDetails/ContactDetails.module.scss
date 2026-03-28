@@ -51,8 +51,9 @@
       #eb5f1b
     );
     filter: blur(80px);
-    opacity: 0.3;
+    opacity: 0.35;
     animation: rotatingRainbow 10s linear infinite;
+    z-index: -1;
   }
 }
 
