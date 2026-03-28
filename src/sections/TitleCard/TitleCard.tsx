@@ -12,8 +12,11 @@ interface TitleCardProps {
 
 const renderAvailabilitySection = () => (
   <p>
-    I'm currently <span className={cn(css.titleCard__availability)}>✅ available</span> for full
-    time and contract roles.
+    I'm currently{' '}
+    <span className={cn(css.titleCard__availability)} aria-label="Available for work">
+      ✅ available
+    </span>{' '}
+    for full time and contract roles.
   </p>
 );
 
@@ -32,11 +35,11 @@ export default function TitleCard({
         Stefan Ku<em>dev</em>
       </h1>
       <h2 className={cn(css.titleCard__tagline)}>{tagline}</h2>
-      <hr className={cn(css.titleCard__divider)} />
+      <hr className={cn(css.titleCard__divider)} aria-hidden="true" />
       <div className={cn(css.titleCard__paragraphs)}>
         {showAvailability && renderAvailabilitySection()}
 
-        <section className={cn(css.titleCard__contactButtons)}>
+        <section className={cn(css.titleCard__contactButtons)} aria-label="Contact options">
           <Button
             href={CV_URL}
             label="Download CV"

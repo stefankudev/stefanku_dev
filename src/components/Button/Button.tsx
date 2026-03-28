@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import cn from 'classnames';
 import css from './Button.module.scss';
 
@@ -10,14 +11,7 @@ interface ButtonProps {
   small?: boolean;
 }
 
-export default function Button({
-  href,
-  label,
-  logoSrc,
-  logoAlt,
-  external = false,
-  small = false,
-}: ButtonProps) {
+function Button({ href, label, logoSrc, logoAlt, external = false, small = false }: ButtonProps) {
   return (
     <a
       className={cn(css.button, small && css['button--small'])}
@@ -30,3 +24,5 @@ export default function Button({
     </a>
   );
 }
+
+export default memo(Button);

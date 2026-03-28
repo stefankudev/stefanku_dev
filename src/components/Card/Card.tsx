@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { memo, type ReactNode } from 'react';
 import cn from 'classnames';
 import css from './Card.module.scss';
 
@@ -14,7 +14,7 @@ interface CardProps {
   variant?: CardVariant;
 }
 
-export default function Card({
+function Card({
   title,
   titleSeperator,
   children,
@@ -35,8 +35,10 @@ export default function Card({
       }}
     >
       {title ? <h3 className={cn(css.card__title)}>{title}</h3> : null}
-      {titleSeperator ? <hr className={cn(css.card__divider)} /> : null}
+      {titleSeperator ? <hr className={cn(css.card__divider)} aria-hidden="true" /> : null}
       {children}
     </div>
   );
 }
+
+export default memo(Card);

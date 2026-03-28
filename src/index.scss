@@ -17,7 +17,7 @@ main {
   padding: 20px;
   font-family: var(--font-family-body);
   min-width: 35rem !important;
-  transition: all 0.75s ease-in-out;
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
 .blur {

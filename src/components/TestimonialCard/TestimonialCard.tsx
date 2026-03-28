@@ -19,7 +19,12 @@ export default function TestimonialCard({
   return (
     <Card variant="testimonial">
       <div>
-        <img className={cn(css.testimonialCard__img)} alt={'A photo of ' + name} src={photo} />
+        <img
+          className={cn(css.testimonialCard__img)}
+          alt={'A photo of ' + name}
+          src={photo}
+          loading="lazy"
+        />
       </div>
       <div>
         <h4 className={cn(css.testimonialCard__name)}>{name}</h4>

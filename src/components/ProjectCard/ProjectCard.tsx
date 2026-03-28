@@ -60,20 +60,21 @@ export default function ProjectCard({
       <div className={cn(css.projectCard__description)}>
         <h4>{title}</h4>
         <p>{description}</p>
-        {techStack.map((techName) =>
-          techName in techStackLogos ? (
-            <img
-              key={techName}
-              className={cn(css.projectCard__techLogo)}
-              src={techStackLogos[techName]}
-              alt={techName}
-            />
-          ) : null
+        {techStack.map(
+          (techName) =>
+            techName in techStackLogos && (
+              <img
+                key={techName}
+                className={cn(css.projectCard__techLogo)}
+                src={techStackLogos[techName]}
+                alt={techName}
+              />
+            )
         )}
         <div className={cn(css.projectCard__links)}>
-          {links.map((el, idx) => (
+          {links.map((el) => (
             <a
-              key={idx}
+              key={el.linkTitle}
               className={cn(css.projectCard__link)}
               href={el.url}
               target="_blank"

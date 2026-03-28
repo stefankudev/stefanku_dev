@@ -35,11 +35,13 @@ const MyHobbies: Hobby[] = [
 export default function Hobbies() {
   return (
     <Card title="Hobbies / Interests" titleSeperator>
-      {MyHobbies.map((hobby, idx) => (
-        <ListItemCard key={idx}>
+      {MyHobbies.map((hobby) => (
+        <ListItemCard key={hobby.name}>
           <h4 className={cn(css.hobby__title)}>{hobby.name}</h4>
           <ul className={cn(css.hobby__list)}>
-            {hobby.content ? hobby.content.map((el, i) => <li key={i}>{el}</li>) : null}
+            {hobby.content
+              ? hobby.content.map((el, i) => <li key={hobby.name + '-' + i}>{el}</li>)
+              : null}
           </ul>
         </ListItemCard>
       ))}

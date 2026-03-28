@@ -160,7 +160,10 @@ interface TestimonialsProps {
 }
 
 const renderVisibleTestimonials = () =>
-  VisibleTestimonials.map((testimonial, idx) => <TestimonialCard key={idx} {...testimonial} />);
+  VisibleTestimonials.map((testimonial) => (
+    <TestimonialCard key={testimonial.name} {...testimonial} />
+  ));
+
 export default function Testimonials({ useCarousel }: TestimonialsProps) {
   return (
     <Card title="Testimonials" titleSeperator>

@@ -17,8 +17,8 @@ interface ItemListProps {
 function ItemList({ title, items }: ItemListProps) {
   return (
     <Card title={title} titleSeperator>
-      {items.map((item, idx) => (
-        <ListItemCard key={idx}>
+      {items.map((item) => (
+        <ListItemCard key={item.title}>
           <div className={cn(css.talk__content)}>
             <h4 className={cn(css.talk__title)}>{item.title}</h4>
             <p className={cn(css.talk__location)}>{item.location}</p>
@@ -63,3 +63,6 @@ export function Advocacy() {
 export function Mentorship() {
   return <ItemList title="Mentorship" items={mentorshipItems} />;
 }
+
+const CommunityWork = { Advocacy, Mentorship };
+export default CommunityWork;
