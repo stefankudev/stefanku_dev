@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import Card from "./Card.astro";
+import { Image } from 'astro:assets';
+import Card from './Card.astro';
 
 interface Props {
   name?: string;
@@ -10,10 +10,10 @@ interface Props {
 }
 
 const {
-  name = "Firstname Lastname",
-  jobTitle = "Job Title",
-  text = "Testimonial text goes here.",
-  photo = "",
+  name = 'Firstname Lastname',
+  jobTitle = 'Job Title',
+  text = 'Testimonial text goes here.',
+  photo = '',
 } = Astro.props;
 
 const imageSize: number = 250;

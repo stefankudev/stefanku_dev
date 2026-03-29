@@ -23,15 +23,17 @@ const { showAvailability = true, tagline = 'Senior Engineer' } = Astro.props;
   <h2 class="titleCard__tagline">{tagline}</h2>
   <hr class="titleCard__divider" aria-hidden="true" />
   <div class="titleCard__paragraphs">
-    {showAvailability && (
-      <p>
-        I'm currently{' '}
-        <span class="titleCard__availability" aria-label="Available for work">
-          ✅ available
-        </span>{' '}
-        for full time and contract roles.
-      </p>
-    )}
+    {
+      showAvailability && (
+        <p>
+          I'm currently{" "}
+          <span class="titleCard__availability" aria-label="Available for work">
+            ✅ available
+          </span>{" "}
+          for full time and contract roles.
+        </p>
+      )
+    }
 
     <section class="titleCard__contactButtons" aria-label="Contact options">
       <Button
@@ -42,7 +44,13 @@ const { showAvailability = true, tagline = 'Senior Engineer' } = Astro.props;
         external
         small
       />
-      <Button href={EMAIL_URL} label="Email" logoSrc="/logos/gmail.svg" logoAlt="Gmail" small />
+      <Button
+        href={EMAIL_URL}
+        label="Email"
+        logoSrc="/logos/gmail.svg"
+        logoAlt="Gmail"
+        small
+      />
       <Button
         href={LINKEDIN_URL}
         label="LinkedIn"
@@ -56,8 +64,8 @@ const { showAvailability = true, tagline = 'Senior Engineer' } = Astro.props;
 </Card>
 
 <style lang="scss">
-  @use '../styles/utilities' as utilities;
-  @use '../styles/animations' as animations;
+  @use "../styles/utilities" as utilities;
+  @use "../styles/animations" as animations;
 
   .titleCard {
     &__profileImg {
