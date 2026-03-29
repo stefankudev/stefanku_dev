@@ -6,7 +6,7 @@ interface Props {
   logoAlt: string;
   external?: boolean;
   small?: boolean;
-  loading?: "eager" | "lazy";
+  loading?: 'eager' | 'lazy';
 }
 
 const {
@@ -16,7 +16,7 @@ const {
   logoAlt,
   external = false,
   small = false,
-  loading = "eager",
+  loading = 'eager',
 } = Astro.props;
 ---
 
