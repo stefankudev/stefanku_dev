@@ -6,12 +6,19 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
 <footer class="contactDetails__footer">
   <section class="contactDetails__text">Contact me via:</section>
   <section class="contactDetails__buttons">
-    <Button href={EMAIL_URL} label="Email" logoSrc="/logos/gmail.svg" logoAlt="Gmail" />
+    <Button
+      href={EMAIL_URL}
+      label="Email"
+      logoSrc="/logos/gmail.svg"
+      logoAlt="Gmail"
+      loading="lazy"
+    />
     <Button
       href={LINKEDIN_URL}
       label="LinkedIn"
       logoSrc="/logos/linkedin.svg"
       logoAlt="LinkedIn"
+      loading="lazy"
       external
     />
     <Button
@@ -19,6 +26,7 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
       label="Telegram"
       logoSrc="/logos/telegram.svg"
       logoAlt="Telegram"
+      loading="lazy"
       external
     />
     <Button
@@ -26,6 +34,7 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
       label="Messenger"
       logoSrc="/logos/messenger.svg"
       logoAlt="Messenger"
+      loading="lazy"
       external
     />
   </section>
