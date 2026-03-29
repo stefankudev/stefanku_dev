@@ -8,14 +8,7 @@ interface Props {
   variant?: 'default' | 'title' | 'project' | 'testimonial';
 }
 
-const {
-  title,
-  titleSeperator,
-  style = {},
-  margin,
-  padding,
-  variant = 'default',
-} = Astro.props;
+const { title, titleSeperator, style = {}, margin, padding, variant = 'default' } = Astro.props;
 
 const variantClass = variant !== 'default' ? `card--${variant}` : '';
 ---

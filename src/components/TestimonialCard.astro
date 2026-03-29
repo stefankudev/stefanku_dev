@@ -8,7 +8,12 @@ interface Props {
   photo?: string;
 }
 
-const { name = 'Firstname Lastname', jobTitle = 'Job Title', text = 'Testimonial text goes here.', photo = '' } = Astro.props;
+const {
+  name = 'Firstname Lastname',
+  jobTitle = 'Job Title',
+  text = 'Testimonial text goes here.',
+  photo = '',
+} = Astro.props;
 ---
 
 <Card variant="testimonial">
