@@ -1,5 +1,5 @@
 ---
-import Card from './Card.astro';
+import Card from "./Card.astro";
 
 interface Props {
   name?: string;
@@ -9,16 +9,16 @@ interface Props {
 }
 
 const {
-  name = 'Firstname Lastname',
-  jobTitle = 'Job Title',
-  text = 'Testimonial text goes here.',
-  photo = '',
+  name = "Firstname Lastname",
+  jobTitle = "Job Title",
+  text = "Testimonial text goes here.",
+  photo = "",
 } = Astro.props;
 ---
 
 <Card variant="testimonial">
   <div>
-    <img class="testimonialCard__img" alt={'A photo of ' + name} src={photo} loading="lazy" />
+    <img class="testimonialCard__img" alt={name} src={photo} loading="lazy" />
   </div>
   <div>
     <h4 class="testimonialCard__name">{name}</h4>
