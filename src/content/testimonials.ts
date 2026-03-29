@@ -39,7 +39,7 @@ const testimonialsHL: Testimonial[] = [
     visible: true,
     name: 'Ragne Terava',
     jobTitle: 'Senior SDET | Hargreaves Lansdown',
-    text: "During the critical phase of the LTAF project, Stefan brought people together through swarming and pairing sessions - this was key to getting it over the line. He consistently demonstrates strong attention to detail, understands both the 'what' and 'why' behind the work, and has the confidence to speak up when something doesn't feel right. His communication is always clear and thorough, and he maintains a strong test-first, quality-driven mindset. He works quickly under pressure but never compromises on standards. His curiosity and drive for growth make him a collaborative force who helps the team produce work greater than the sum of its parts.",
+    text: "During the critical phase of the LTAF project, Stefan brought people together through swarming and pairing sessions - this was key to getting it over the line. He consistently demonstrates strong attention to detail, understands both the <i>'what'</i> and <i>'why'</i> behind the work, and has the confidence to speak up when something doesn't feel right. His communication is always clear and thorough, and he maintains a strong test-first, quality-driven mindset. He works quickly under pressure but never compromises on standards. His curiosity and drive for growth make him a collaborative force who helps the team produce work greater than the sum of its parts.",
     photo: '/photos/Photo_Placeholder_Female.png',
   },
 ];
