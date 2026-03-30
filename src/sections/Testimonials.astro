@@ -1,0 +1,20 @@
+---
+import Card from '../components/Card.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import { type Testimonial, testimonials } from '../content/testimonials';
+
+const content: Testimonial[] = testimonials;
+---
+
+<Card title="Testimonials" titleSeperator>
+  <div>
+    {content.map((testimonial) => (
+      <TestimonialCard
+        name={testimonial.name}
+        jobTitle={testimonial.jobTitle}
+        text={testimonial.text}
+        photo={testimonial.photo}
+      />
+    ))}
+  </div>
+</Card>

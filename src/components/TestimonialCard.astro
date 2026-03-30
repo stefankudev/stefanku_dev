@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import Card from './Card.astro';
+
+interface Props {
+  name?: string;
+  jobTitle?: string;
+  text?: string;
+  photo?: string;
+}
+
+const {
+  name = 'Firstname Lastname',
+  jobTitle = 'Job Title',
+  text = 'Testimonial text goes here.',
+  photo = '',
+} = Astro.props;
+
+const imageSize: number = 250;
+---
+
+<Card variant="testimonial">
+  <div class="testimonialCard__wrapper">
+    <Image alt={name} src={photo} width={imageSize} height={imageSize} />
+  </div>
+  <div>
+    <h4 class="testimonialCard__name">{name}</h4>
+    <p class="testimonialCard__jobTitle">{jobTitle}</p>
+    <p class="testimonialCard__text" set:html={text} />
+  </div>
+</Card>
+
+<style lang="scss">
+  .testimonialCard {
+    &__wrapper {
+      img {
+        height: 7.75rem !important;
+        width: 7.75rem !important;
+        border: 0.5px solid var(--color-border-strong);
+        border-radius: 999em;
+        pointer-events: none;
+        margin: 0 1.25rem 2rem 0;
+        opacity: 0.8;
+      }
+    }
+
+    &__name {
+      text-decoration: none;
+      margin: 0.5rem 0 0.25rem;
+    }
+
+    &__jobTitle {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 1em !important;
+      letter-spacing: 0.5px;
+      color: var(--color-text-muted);
+    }
+
+    &__text {
+      line-height: 1.5rem;
+      text-align: justify;
+      font-size: 1.1em;
+      letter-spacing: 0.25px;
+      color: var(--color-text-secondary);
+
+      :global(b) {
+        color: var(--color-text-primary);
+      }
+    }
+  }
+</style>

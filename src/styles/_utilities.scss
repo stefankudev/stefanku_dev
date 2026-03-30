@@ -1,0 +1,49 @@
+%cardBase {
+  margin: 1rem auto;
+  padding: 1.25rem;
+  background-color: var(--color-bg-card);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-default);
+  cursor: default;
+  transition: var(--transition-default);
+  z-index: 5;
+}
+
+%fancyDivider {
+  border: none;
+  height: 2px;
+  border-radius: 99em;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  margin: 1.25rem 0;
+}
+
+%contactButtonContainer {
+  display: block;
+  text-align: center;
+  padding: 0.65rem;
+  color: var(--color-text-primary);
+  border-radius: var(--radius-default);
+  z-index: 999;
+  opacity: 1;
+  line-height: 2.5em;
+}
+
+%techLogo {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.65rem;
+  margin: 0.2rem;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.5em;
+}
+
+%sectionTitle {
+  font-size: 1.5rem;
+  letter-spacing: 0rem;
+}

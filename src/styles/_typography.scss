@@ -1,0 +1,49 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+}
+
+h1 {
+  font-size: 3.5em;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2em;
+  letter-spacing: 0.9px;
+}
+
+h4 {
+  font-size: 1.75em;
+  letter-spacing: 0.9px;
+}
+
+body {
+  font-family: var(--font-family-body);
+}
+
+.text {
+  &--muted {
+    color: var(--color-text-muted);
+  }
+
+  &--secondary {
+    color: var(--color-text-secondary);
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}

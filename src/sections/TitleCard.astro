@@ -1,0 +1,144 @@
+---
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import { CV_URL, EMAIL_URL, LINKEDIN_URL } from '../constants/links';
+
+interface Props {
+  showAvailability?: boolean;
+  tagline?: string;
+}
+
+const { showAvailability = true, tagline = 'Software Engineer' } = Astro.props;
+---
+
+<Card variant="title">
+  <img
+    class="titleCard__profileImg"
+    src="/Stefan_Kudev.jpg"
+    alt="A photograph of Stefan Kudev"
+  />
+  <h1 class="titleCard__name">
+    Stefan Ku<em>dev</em>
+  </h1>
+  <h2 class="titleCard__tagline">{tagline}</h2>
+  <hr class="titleCard__divider" aria-hidden="true" />
+  <div class="titleCard__paragraphs">
+    {
+      showAvailability && (
+        <p>
+          I'm currently{" "}
+          <span class="titleCard__availability" aria-label="Available for work">
+            ✅ available
+          </span>{" "}
+          for full time and contract roles.
+        </p>
+      )
+    }
+
+    <section class="titleCard__contactButtons" aria-label="Contact options">
+      <Button
+        href={CV_URL}
+        label="Download CV"
+        logoSrc="/logos/pdf.svg"
+        logoAlt="PDF"
+        external
+        small
+      />
+      <Button
+        href={EMAIL_URL}
+        label="Email"
+        logoSrc="/logos/gmail.svg"
+        logoAlt="Gmail"
+        small
+      />
+      <Button
+        href={LINKEDIN_URL}
+        label="LinkedIn"
+        logoSrc="/logos/linkedin.svg"
+        logoAlt="LinkedIn"
+        external
+        small
+      />
+    </section>
+  </div>
+</Card>
+
+<style lang="scss">
+  @use "../styles/utilities" as utilities;
+  @use "../styles/animations" as animations;
+
+  .titleCard {
+    &__profileImg {
+      display: block;
+      margin: 0.65rem auto;
+      border-radius: 99em;
+      max-width: 150px;
+      box-shadow:
+        0px -20px 50px rgba(0, 23, 73, 0.5),
+        0px 25px 50px rgba(0, 162, 144, 0.4);
+    }
+
+    &__name {
+      font-size: 3.5em;
+      letter-spacing: 1.5px;
+      margin: 1.85rem 0 -0.65rem 0;
+      white-space: nowrap !important;
+      transition: var(--transition-default);
+
+      em {
+        border-radius: 0.05em;
+        background-color: rgba(61, 194, 246, 0.001);
+        padding: 0.45rem 0.55rem;
+        margin-left: -0.65rem;
+        display: inline-block;
+        transform: rotate(0deg) !important;
+        font-style: normal;
+        transition: var(--transition-default);
+      }
+
+      &:hover em {
+        background-color: rgba(61, 194, 246, 0.1);
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.75) !important;
+        border-radius: 0.15em;
+        transition: 1s all ease;
+      }
+    }
+
+    &__tagline {
+      font-size: 2em;
+      letter-spacing: 1px;
+      color: rgb(215, 252, 255);
+      font-weight: 700;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    &__availability {
+      background: var(--color-accent-green);
+      text-transform: uppercase;
+      padding: 0.25rem 1.13rem 0.25rem 0.75rem;
+      border-radius: 99em;
+      letter-spacing: 1px;
+      color: rgb(240, 255, 245) !important;
+      border: 3px solid var(--color-border-default);
+      font-weight: bold;
+      margin: 0.3rem;
+      text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 10px var(--color-accent-green-glow);
+      animation: glowingGreen 1.5s linear infinite;
+    }
+
+    &__divider {
+      @extend %fancyDivider;
+    }
+
+    &__paragraphs {
+      font-size: 1.5em;
+      line-height: 1.4;
+    }
+
+    &__contactButtons {
+      @extend %contactButtonContainer;
+    }
+  }
+</style>

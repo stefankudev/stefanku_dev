@@ -1,0 +1,86 @@
+---
+import Card from '../components/Card.astro';
+import ListItemCard from '../components/ListItemCard.astro';
+
+interface Item {
+  title: string;
+  location: string;
+  date: string;
+}
+
+const advocacyItems: Item[] = [
+  {
+    title: 'Should you work for a startup?',
+    location: '💻 Remote | School of Code',
+    date: 'May 2021',
+  },
+  {
+    title: 'Getting started with Chocolatey for Windows',
+    location: 'Fusion ⚡ Lightning Talks',
+    date: '11 March 2021',
+  },
+  {
+    title: 'Building Your First Chrome Extension',
+    location: 'Brum.js ⚡ Lightning Talks',
+    date: '25 February 2021',
+  },
+];
+
+const mentorshipItems: Item[] = [
+  {
+    title: 'Introduction to Web Development - Community Class',
+    location: '💻 Remote | TechBirmingham',
+    date: 'October 2020',
+  },
+];
+---
+
+<Card title="Advocacy" titleSeperator>
+  {advocacyItems.map((item) => (
+    <ListItemCard>
+      <div class="talk__content">
+        <h4 class="talk__title">{item.title}</h4>
+        <p class="talk__location">{item.location}</p>
+        <span class="talk__date">📅 {item.date}</span>
+      </div>
+    </ListItemCard>
+  ))}
+</Card>
+
+<Card title="Mentorship" titleSeperator>
+  {mentorshipItems.map((item) => (
+    <ListItemCard>
+      <div class="talk__content">
+        <h4 class="talk__title">{item.title}</h4>
+        <p class="talk__location">{item.location}</p>
+        <span class="talk__date">📅 {item.date}</span>
+      </div>
+    </ListItemCard>
+  ))}
+</Card>
+
+<style lang="scss">
+  .talk {
+    &__content {
+      padding: 1rem;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      letter-spacing: 0rem;
+      margin: 0 0 0.25rem 0 !important;
+    }
+
+    &__location {
+      margin: 0 0 1rem 0;
+      text-transform: uppercase;
+      font-size: 1em;
+      letter-spacing: 2px;
+      color: var(--color-text-muted);
+    }
+
+    &__date {
+      margin: 0 0 0.5rem;
+    }
+  }
+</style>

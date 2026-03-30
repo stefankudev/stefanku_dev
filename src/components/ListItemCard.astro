@@ -1,0 +1,14 @@
+---
+import Card from './Card.astro';
+
+interface Props {
+  margin?: string;
+  padding?: string;
+}
+
+const { margin = '0 0 0.85rem', padding = '0.2rem 0.5rem' } = Astro.props;
+---
+
+<Card margin={margin} padding={padding}>
+  <slot />
+</Card>
