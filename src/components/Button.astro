@@ -5,17 +5,10 @@ interface Props {
   logoSrc: string;
   external?: boolean;
   small?: boolean;
-  loading?: "eager" | "lazy";
+  loading?: 'eager' | 'lazy';
 }
 
-const {
-  href,
-  label,
-  logoSrc,
-  external = false,
-  small = false,
-  loading = "eager",
-} = Astro.props;
+const { href, label, logoSrc, external = false, small = false, loading = 'eager' } = Astro.props;
 ---
 
 <a
