@@ -5,16 +5,23 @@ interface Props {
   style?: Record<string, string>;
   margin?: string;
   padding?: string;
-  variant?: 'default' | 'title' | 'project' | 'testimonial';
+  variant?: "default" | "title" | "project" | "testimonial";
 }
 
-const { title, titleSeperator, style = {}, margin, padding, variant = 'default' } = Astro.props;
+const {
+  title,
+  titleSeperator,
+  style = {},
+  margin,
+  padding,
+  variant = "default",
+} = Astro.props;
 
-const variantClass = variant !== 'default' ? `card--${variant}` : '';
+const variantClass = variant !== "default" ? `card--${variant}` : "";
 ---
 
 <div
-  class:list={['card', variantClass]}
+  class:list={["card", variantClass]}
   style={{
     ...style,
     margin,
@@ -27,8 +34,8 @@ const variantClass = variant !== 'default' ? `card--${variant}` : '';
 </div>
 
 <style lang="scss">
-  @use '../styles/utilities' as utilities;
-  @use '../styles/animations' as animations;
+  @use "../styles/utilities" as utilities;
+  @use "../styles/animations" as animations;
 
   .card {
     @extend %cardBase;

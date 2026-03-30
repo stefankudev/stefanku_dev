@@ -1,14 +1,14 @@
 ---
-import Button from '../components/Button.astro';
-import Card from '../components/Card.astro';
-import { CV_URL, EMAIL_URL, LINKEDIN_URL } from '../constants/links';
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import { CV_URL, EMAIL_URL, LINKEDIN_URL } from "../constants/links";
 
 interface Props {
   showAvailability?: boolean;
   tagline?: string;
 }
 
-const { showAvailability = true, tagline = 'Software Engineer' } = Astro.props;
+const { showAvailability = true, tagline = "Software Engineer" } = Astro.props;
 ---
 
 <Card variant="title">
@@ -18,7 +18,7 @@ const { showAvailability = true, tagline = 'Software Engineer' } = Astro.props;
     alt="A photograph of Stefan Kudev"
   />
   <h1 class="titleCard__name">
-    Stefan Ku<em>dev</em>
+    Stefan Ku<div class="titleCard__name__emphasis">dev</div>
   </h1>
   <h2 class="titleCard__tagline">{tagline}</h2>
   <hr class="titleCard__divider" aria-hidden="true" />
@@ -72,23 +72,24 @@ const { showAvailability = true, tagline = 'Software Engineer' } = Astro.props;
 
     &__name {
       font-size: 3.5em;
-      letter-spacing: 1.5px;
-      margin: 1.85rem 0 -0.65rem 0;
-      white-space: nowrap !important;
+      letter-spacing: 0.0015rem;
+      line-height: 0.95;
+      text-align: center;
+      margin: 1.85rem 0 1rem 0;
       transition: var(--transition-default);
 
-      em {
+      &__emphasis {
         border-radius: 0.05em;
         background-color: rgba(61, 194, 246, 0.001);
         padding: 0.45rem 0.55rem;
         margin-left: -0.65rem;
-        display: inline-block;
+        display: inline;
         transform: rotate(0deg) !important;
         font-style: normal;
         transition: var(--transition-default);
       }
 
-      &:hover em {
+      &:hover __emphasis {
         background-color: rgba(61, 194, 246, 0.1);
         text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.75) !important;
         border-radius: 0.15em;
@@ -99,9 +100,11 @@ const { showAvailability = true, tagline = 'Software Engineer' } = Astro.props;
     &__tagline {
       font-size: 2em;
       letter-spacing: 1px;
+      line-height: 0.95;
       color: rgb(215, 252, 255);
       font-weight: 700;
       margin: 0;
+      text-align: center;
       text-transform: uppercase;
     }
 
