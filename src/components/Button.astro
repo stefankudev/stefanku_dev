@@ -3,20 +3,18 @@ interface Props {
   href: string;
   label: string;
   logoSrc: string;
-  logoAlt: string;
   external?: boolean;
   small?: boolean;
-  loading?: 'eager' | 'lazy';
+  loading?: "eager" | "lazy";
 }
 
 const {
   href,
   label,
   logoSrc,
-  logoAlt,
   external = false,
   small = false,
-  loading = 'eager',
+  loading = "eager",
 } = Astro.props;
 ---
 
@@ -26,7 +24,7 @@ const {
   target={external ? "_blank" : undefined}
   rel={external ? "noreferrer" : undefined}
 >
-  <img class="button__logo" src={logoSrc} alt={logoAlt} loading={loading} />
+  <img class="button__logo" src={logoSrc} alt="" loading={loading} />
   &nbsp;{label}
 </a>
 

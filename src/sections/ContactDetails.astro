@@ -1,6 +1,11 @@
 ---
-import Button from '../components/Button.astro';
-import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constants/links';
+import Button from "../components/Button.astro";
+import {
+  EMAIL_URL,
+  LINKEDIN_URL,
+  MESSENGER_URL,
+  TELEGRAM_URL,
+} from "../constants/links";
 ---
 
 <footer class="contactDetails__footer">
@@ -10,14 +15,12 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
       href={EMAIL_URL}
       label="Email"
       logoSrc="/logos/gmail.svg"
-      logoAlt="Gmail"
       loading="lazy"
     />
     <Button
       href={LINKEDIN_URL}
       label="LinkedIn"
       logoSrc="/logos/linkedin.svg"
-      logoAlt="LinkedIn"
       loading="lazy"
       external
     />
@@ -25,7 +28,6 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
       href={TELEGRAM_URL}
       label="Telegram"
       logoSrc="/logos/telegram.svg"
-      logoAlt="Telegram"
       loading="lazy"
       external
     />
@@ -33,7 +35,6 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
       href={MESSENGER_URL}
       label="Messenger"
       logoSrc="/logos/messenger.svg"
-      logoAlt="Messenger"
       loading="lazy"
       external
     />

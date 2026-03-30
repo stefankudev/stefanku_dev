@@ -1,14 +1,14 @@
 ---
-import Button from '../components/Button.astro';
-import Card from '../components/Card.astro';
-import { CV_URL, EMAIL_URL, LINKEDIN_URL } from '../constants/links';
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import { CV_URL, EMAIL_URL, LINKEDIN_URL } from "../constants/links";
 
 interface Props {
   showAvailability?: boolean;
   tagline?: string;
 }
 
-const { showAvailability = true, tagline = 'Software Engineer' } = Astro.props;
+const { showAvailability = true, tagline = "Software Engineer" } = Astro.props;
 ---
 
 <Card variant="title">
@@ -40,22 +40,14 @@ const { showAvailability = true, tagline = 'Software Engineer' } = Astro.props;
         href={CV_URL}
         label="Download CV"
         logoSrc="/logos/pdf.svg"
-        logoAlt="PDF"
         external
         small
       />
-      <Button
-        href={EMAIL_URL}
-        label="Email"
-        logoSrc="/logos/gmail.svg"
-        logoAlt="Gmail"
-        small
-      />
+      <Button href={EMAIL_URL} label="Email" logoSrc="/logos/gmail.svg" small />
       <Button
         href={LINKEDIN_URL}
         label="LinkedIn"
         logoSrc="/logos/linkedin.svg"
-        logoAlt="LinkedIn"
         external
         small
       />
