@@ -20,7 +20,7 @@ const imageSize: number = 250;
 ---
 
 <Card variant="testimonial">
-  <div class="testimonialCard__wrapper">
+  <div class="testimonialCard__imageWrapper">
     <Image alt={name} src={photo} width={imageSize} height={imageSize} />
   </div>
   <div>
@@ -32,14 +32,15 @@ const imageSize: number = 250;
 
 <style lang="scss">
   .testimonialCard {
-    &__wrapper {
+    &__imageWrapper {
       img {
-        height: 7.75rem !important;
-        width: 7.75rem !important;
+        height: auto;
+        width: 12.5vw;
+        max-width: 7rem;
         border: 0.5px solid var(--color-border-strong);
         border-radius: 999em;
         pointer-events: none;
-        margin: 0 1.25rem 2rem 0;
+        margin: 0.75rem 1.25rem 0 0;
         opacity: 0.8;
       }
     }

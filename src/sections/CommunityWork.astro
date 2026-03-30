@@ -36,27 +36,31 @@ const mentorshipItems: Item[] = [
 ---
 
 <Card title="Advocacy" titleSeperator>
-  {advocacyItems.map((item) => (
-    <ListItemCard>
-      <div class="talk__content">
-        <h4 class="talk__title">{item.title}</h4>
-        <p class="talk__location">{item.location}</p>
-        <span class="talk__date">📅 {item.date}</span>
-      </div>
-    </ListItemCard>
-  ))}
+  {
+    advocacyItems.map((item) => (
+      <ListItemCard>
+        <div class="talk__content">
+          <h4 class="talk__title">{item.title}</h4>
+          <p class="talk__location">{item.location}</p>
+          <span class="talk__date">📅 {item.date}</span>
+        </div>
+      </ListItemCard>
+    ))
+  }
 </Card>
 
 <Card title="Mentorship" titleSeperator>
-  {mentorshipItems.map((item) => (
-    <ListItemCard>
-      <div class="talk__content">
-        <h4 class="talk__title">{item.title}</h4>
-        <p class="talk__location">{item.location}</p>
-        <span class="talk__date">📅 {item.date}</span>
-      </div>
-    </ListItemCard>
-  ))}
+  {
+    mentorshipItems.map((item) => (
+      <ListItemCard>
+        <div class="talk__content">
+          <h4 class="talk__title">{item.title}</h4>
+          <p class="talk__location">{item.location}</p>
+          <span class="talk__date">📅 {item.date}</span>
+        </div>
+      </ListItemCard>
+    ))
+  }
 </Card>
 
 <style lang="scss">
@@ -68,6 +72,7 @@ const mentorshipItems: Item[] = [
     &__title {
       font-size: 1.5rem;
       letter-spacing: 0rem;
+      font-weight: normal;
       margin: 0 0 0.25rem 0 !important;
     }
 
