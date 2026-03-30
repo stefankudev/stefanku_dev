@@ -1,6 +1,11 @@
 ---
-import Button from '../components/Button.astro';
-import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constants/links';
+import Button from "../components/Button.astro";
+import {
+  EMAIL_URL,
+  LINKEDIN_URL,
+  MESSENGER_URL,
+  TELEGRAM_URL,
+} from "../constants/links";
 ---
 
 <footer class="contactDetails__footer">
@@ -40,7 +45,7 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
 <style lang="scss">
   .contactDetails {
     &__footer {
-      padding: 2rem;
+      padding: 3rem;
       text-align: center;
     }
 
@@ -71,7 +76,7 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
       width: 31.25rem;
       height: 31.25rem;
       bottom: -35%;
-      left: calc(50% - 7rem);
+      left: calc(50% - 10rem);
       color: black;
       margin-top: -12.5%;
       margin-left: -12.5%;
@@ -88,14 +93,10 @@ import { EMAIL_URL, LINKEDIN_URL, MESSENGER_URL, TELEGRAM_URL } from '../constan
         #ff9227,
         #eb5f1b
       );
-      filter: blur(80px);
+      filter: blur(5rem);
       opacity: 0.35;
-      animation: rotatingRainbow 10s linear infinite;
+      animation: rotatingRainbow 7s linear infinite;
       z-index: -1;
     }
-  }
-
-  .hide {
-    opacity: 0;
   }
 </style>
