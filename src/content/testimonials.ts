@@ -12,10 +12,10 @@ const testimonialsHL: Testimonial[] = [
     name: 'Troy Johnson',
     jobTitle: 'Engineer | BAE Systems',
     text: "If you're looking for a mentor, Stefan's your guy. Whether it's getting promoted, improving code quality, or building a better work/life balance, he's the person to go to. He's honest, clear, and direct, with just the right level of empathy. He won't hold your hand, but he will point you in the right direction. Without his guidance, I'm not sure I would have landed a role that aligns so well with my goals and values.",
-    photo: '/photos/Photo_Placeholder_Male.png',
+    photo: '/photos/Troy_Johnson_HL.jpeg',
   },
   {
-    visible: false,
+    visible: true,
     name: 'Simon Davey',
     jobTitle: 'Senior Engineer | Hargreaves Lansdown',
     text: "Stefan is an invaluable member of the team and always willing to help. He explains his thinking clearly and challenges ideas in a constructive way. His work on the Pension Calculator has been outstanding, and his knowledge of TypeScript and AWS is a huge asset to the team. I'm looking forward to working more closely together on future projects.",
