@@ -3,14 +3,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(210, 12%, 15%);
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(210, 12%, 30%);
+  background: var(--scrollbar-thumb);
   border-radius: 5em;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(210, 12%, 40%);
+  background: var(--scrollbar-thumb-hover);
 }

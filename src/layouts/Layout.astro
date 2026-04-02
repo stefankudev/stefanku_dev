@@ -49,8 +49,17 @@ const {
       crossorigin
     />
     <title>{title}</title>
+    <script is:inline>
+      (function() {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <slot />
   </body>
 </html>
@@ -63,7 +72,7 @@ const {
   }
 
   body {
-    background: linear-gradient(90deg, #2a3035, #171a1d);
+    background: var(--color-bg-body);
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
@@ -88,5 +97,20 @@ const {
 
   .footer {
     color: var(--color-text-primary);
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 0.5rem 1rem;
+    background: var(--color-accent-primary);
+    color: var(--color-text-primary);
+    z-index: 9999;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 0;
   }
 </style>
