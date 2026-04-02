@@ -29,10 +29,10 @@ const testimonialsHL: Testimonial[] = [
     photo: '/photos/Photo_Placeholder_Male.png',
   },
   {
-    visible: false,
+    visible: true,
     name: 'Kylie Baker',
     jobTitle: 'Senior Engineering Manager | Hargreaves Lansdown',
-    text: "When I blocked one of our scheduled deployments due to various concerns, Stefan didn't push back - he took ownership. He documented and tested a proper rollback process, which we ended up needing for an issue that wouldn't have been caught before production. He identified what needed to be done, collaborated with the right teams, secured support, and delivered it end-to-end without being asked. That level of initiative is exactly what you want to see.",
+    text: "When I blocked one of our scheduled deployments due to various concerns, Stefan didn't push back - he took ownership. He documented and tested a proper rollback process, which we ended up needing for an issue that wouldn't have been caught before production. He identified what needed to be done, collaborated with the right teams, secured support, and delivered it end-to-end. That level of initiative is exactly what you want to see.",
     photo: '/photos/Photo_Placeholder_Female.png',
   },
   {
