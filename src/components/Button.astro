@@ -29,10 +29,10 @@ const { href, label, logoSrc, external = false, small = false, loading = 'eager'
     font-weight: 400;
     padding: 0 1rem;
     margin: 0.5rem;
-    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border: 0.1rem solid var(--color-border-button);
     font-family: var(--font-family-heading);
-    color: rgb(255, 255, 255);
-    background: rgba(24, 27, 30, 0.65);
+    color: var(--color-text-button);
+    background: var(--color-bg-button);
     border-radius: var(--radius-default);
     transition: var(--transition-default);
     filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
@@ -40,9 +40,9 @@ const { href, label, logoSrc, external = false, small = false, loading = 'eager'
     &:hover {
       text-decoration: none !important;
       font-weight: 600;
-      color: rgba(0, 0, 0, 1);
-      background: rgba(255, 255, 255, 1);
-      filter: drop-shadow(0 0.5rem 2rem rgba(0, 0, 0, 0.35));
+      color: var(--color-text-button-hover);
+      background: var(--color-bg-button-hover);
+      filter: drop-shadow(var(--shadow-button-hover));
       transform: scale(1.075, 1.075);
     }
 

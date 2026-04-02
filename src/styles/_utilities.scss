@@ -47,3 +47,8 @@
   font-size: 1.5rem;
   letter-spacing: 0rem;
 }
+
+:focus-visible {
+  outline: 0.2rem solid var(--color-accent-primary);
+  outline-offset: 0.15rem;
+}

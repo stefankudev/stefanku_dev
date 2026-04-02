@@ -1,4 +1,5 @@
 ---
+import ThemeToggle from '../components/ThemeToggle.astro';
 import Layout from '../layouts/Layout.astro';
 import CommunityWork from '../sections/CommunityWork.astro';
 import ContactDetails from '../sections/ContactDetails.astro';
@@ -8,7 +9,8 @@ import TitleCard from '../sections/TitleCard.astro';
 ---
 
 <Layout>
-  <main>
+  <ThemeToggle />
+  <main id="main-content">
     <TitleCard showAvailability={false} />
     <Testimonials />
     <CommunityWork />
