@@ -34,6 +34,7 @@ const variantClass = variant !== 'default' ? `card--${variant}` : '';
     @extend %cardBase;
     max-width: var(--card-max-width);
     padding: 1.85rem;
+    border: 1px solid var(--color-nested-card-border);
 
     &__title {
       letter-spacing: 0.9px;
@@ -49,10 +50,10 @@ const variantClass = variant !== 'default' ? `card--${variant}` : '';
       padding: 3em 2em;
       max-width: 55rem;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      background: hsla(197, 61%, 50%, 0.15);
+      background: var(--color-bg-card-title);
 
       &:hover {
-        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+        box-shadow: var(--shadow-card-title-hover);
       }
     }
 
@@ -62,6 +63,7 @@ const variantClass = variant !== 'default' ? `card--${variant}` : '';
       min-width: var(--card-min-width);
       text-align: left;
       opacity: 0.9;
+      border: 1px solid var(--color-nested-card-border);
 
       &:hover {
         opacity: 1;
@@ -76,6 +78,7 @@ const variantClass = variant !== 'default' ? `card--${variant}` : '';
       min-width: var(--card-min-width);
       text-align: left;
       opacity: 0.9;
+      border: 1px solid var(--color-nested-card-border);
 
       &:hover {
         opacity: 1;
